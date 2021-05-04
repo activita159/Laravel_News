@@ -16,3 +16,35 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('test',function(){
+
+    //$變數名稱
+
+    $data = ['a'=>123,'b'=>456];
+
+    dd($data['a']);
+
+    //算術運算子 + - * / ** %
+    //比較運算子 > < >= <= == != <>
+    //邏輯運算子 && || !
+    $num1 = '5';
+    $num2 = '2';
+
+
+    //if(){}
+    //elseif(){}
+    //else(){}
+
+    dd($num1.$num2);// . 字串相加
+    return 'hello World';
+});
+
+
+
+Route::get('test', function ()
+{
+    $data = '123';
+    return view('test',['data'=>$data]);
+});
