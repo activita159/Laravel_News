@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 
@@ -46,5 +46,9 @@ Route::get('test',function(){
 Route::get('test', function ()
 {
     $data = '123';
-    return view('test',['data'=>$data]);
+    $data2 = '456';
+    // return view('test',['abc'=>$data]);
+    // return view('test')->with('abc',$data);
+    return view('test',compact('data','data2'));
+
 });
