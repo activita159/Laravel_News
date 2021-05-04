@@ -88,10 +88,10 @@
     <div class="container-fluid m-0 d-flex flex-wrap align-items-center justify-content-between" style="width: 80%;height: 100%;background-color: #F3F4F6;">
         <div class="left">© 2020 Tailblocks — @knyttneve</div>
         <div class="right" style="margin-left: auto;">
-            <img src="./img/f.jpg" alt="">
-            <img src="./img/t.jpg" alt="">
-            <img src="./img/Unknow.jpg" alt="">
-            <img src="./img/i.jpg" alt="">
+            <img src="{{ asset('./img/f.jpg') }}" alt="">
+            <img src="{{ asset('./img/t.jpg') }}" alt="">
+            <img src="{{ asset('./img/Unknow.jpg') }}" alt="">
+            <img src="{{ asset('./img/i.jpg') }}" alt="">
         </div>
     </div>
   </footer>
