@@ -18,37 +18,65 @@ Route::get('/', function () {
 });
 
 
-Route::get('test',function(){
+// Route::get('test',function(){
 
-    //$變數名稱
+//     //$變數名稱
 
-    $data = ['a'=>123,'b'=>456];
+//     $data = ['a'=>123,'b'=>456];
 
-    dd($data['a']);
+//     dd($data['a']);
 
-    //算術運算子 + - * / ** %
-    //比較運算子 > < >= <= == != <>
-    //邏輯運算子 && || !
-    $num1 = '5';
-    $num2 = '2';
-
-
-    //if(){}
-    //elseif(){}
-    //else(){}
-
-    dd($num1.$num2);// . 字串相加
-    return 'hello World';
-});
+//     //算術運算子 + - * / ** %
+//     //比較運算子 > < >= <= == != <>
+//     //邏輯運算子 && || !
+//     $num1 = '5';
+//     $num2 = '2';
 
 
+//     //if(){}
+//     //elseif(){}
+//     //else(){}
 
-Route::get('test', function ()
+//     dd($num1.$num2);// . 字串相加
+//     return 'hello World';
+// });
+
+
+
+// Route::get('test', function ()
+// {
+//     $data = '123';
+//     $data2 = '456';
+//     // return view('test',['abc'=>$data]);
+//     // return view('test')->with('abc',$data);
+//     return view('test',compact('data','data2'));
+
+// });
+
+
+
+
+
+
+Route::get('news','NewsController@index');
+
+
+Route::get('news/details',function()
 {
-    $data = '123';
-    $data2 = '456';
-    // return view('test',['abc'=>$data]);
-    // return view('test')->with('abc',$data);
-    return view('test',compact('data','data2'));
-
+    return view('news.taiwan-page1');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

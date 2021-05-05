@@ -15,17 +15,16 @@
         width: 100%;
         height: 92px;
       }
+      .container{
+        height: 100px;
+      }
       .box{
-
         width: 70px;
         height: 3px;
         background-color :rgb(0, 9, 128) ;
         margin-top: 1.5rem;
       }
-      .container{
-        margin-top: 86.5px;
 
-      }
       button{
         width: 100px;
         height: 40px;
@@ -67,10 +66,10 @@
             <a class="nav-link" href="#">Contact</a>
           </li>
           <li>
-            <img src="./img/shop.jpg" width="36px" height="30px" alt="" style="margin-right:20px;">
+            <img src="{{ asset('./img/shop.jpg') }}" width="36px" height="30px" alt="" style="margin-right:20px;">
           </li>
           <li>
-            <img src="./img/login.jpg" id="Link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" width="36px" height="34px" alt="">
+            <img src="{{ asset('./img/login.jpg') }}" id="Link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" width="36px" height="34px" alt="">
             <div class="dropdown-menu" aria-labelledby="Link" style="width: 100px;position: absolute;top:90%;left: 85%;">
               <a class="dropdown-item" href="#" style="text-align: center;">Login</a>
             </div>

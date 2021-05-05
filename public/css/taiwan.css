@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+.containerrr{
+    width: 80%;
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.messages{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.data{
+    display: flex;
+    margin-left: auto;
+}
+.news{
+    display: flex;
+    margin-top: 50px;
+
+}
+.detail{
+    margin-left: 30px;
+}
+.news .detail .newsnews{
+    width: 100px;
+    height: 35px;
+    background-color: aquamarine;
+    text-align: center;
+    line-height: 35px;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+}
