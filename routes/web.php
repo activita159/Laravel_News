@@ -59,12 +59,15 @@ Route::get('/', function () {
 
 
 Route::get('news','NewsController@index');
+Route::get('news/details/{id}','NewsController@details');
+Route::get('news/create','NewsController@create');
+Route::get('news/update/{id}','NewsController@update');
+Route::get('news/delete/{id}','NewsController@delete');
 
-
-Route::get('news/details',function()
-{
-    return view('news.taiwan-page1');
-});
+// Route::get('news/details',function()
+// {
+//     return view('news.taiwan-page1');
+// });
 
 
 
