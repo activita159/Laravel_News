@@ -10,7 +10,6 @@
         {{-- @csrf 跨站請求攻擊 --}}
 
 
-
         <div class="form-group">
             <label for="title">標題</label>
             <input type="text" id="title" name="title">
