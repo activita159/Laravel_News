@@ -8,23 +8,23 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <style>
-      *{
+     *{
         font-family: inherit;
       }
       .navbar{
-        width: 100%;
-        height: 92px;
+        width: 100%;            
+        height: 92px;       
       }
-      .container{
-        height: 100px;
-      }
-      .box{
+      .box{        
         width: 70px;
         height: 3px;
         background-color :rgb(0, 9, 128) ;
         margin-top: 1.5rem;
       }
+      .container{
+        margin-top: 86.5px;
 
+      }
       button{
         width: 100px;
         height: 40px;

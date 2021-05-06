@@ -60,7 +60,14 @@ Route::get('/', function () {
 
 Route::get('news','NewsController@index');
 Route::get('news/details/{id}','NewsController@details');
+
+//新增資料
 Route::get('news/create','NewsController@create');
+
+//儲存資料
+Route::post('news/store','NewsController@store');
+
+
 Route::get('news/update/{id}','NewsController@update');
 Route::get('news/delete/{id}','NewsController@delete');
 
