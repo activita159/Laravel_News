@@ -10,6 +10,7 @@
 <div class="containerrr">
     <div class="messages">
         <h1><p>最新消息</p></h1>
+
         <div class="data">
             <p>資料總比數:xxx</p>
             <p>每頁筆數:xxx</p>
@@ -24,13 +25,24 @@
         <img src="{{$item->img}}" width="40%" height="10%" alt="">
         <div class="detail">
             <p class="newsnews">最新消息</p>
-            <a href="news/details/{{$item->id}}"><h2><p>{{$item->title}}</p></h2></a>
+            <a class="btn btn-primary" href="/news/edit/{{ $item->id }}">編輯</a>
+            {{-- <a href="/news/delete/{{$news-id}}">刪除</a> --}}
+            <a href="/news/details/{{$item->id}}"><h2><p>{{$item->title}}</p></h2></a>
             <p>{{$item->date}}</p>
             <p>{{$item->content}}</p>
         </div>
     </div>
     @endforeach
 </div>
+@endsection
+
+
+@section('js')
+
+<script>
+
+</script>
+
 @endsection
 
 

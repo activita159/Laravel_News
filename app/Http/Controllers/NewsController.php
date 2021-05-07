@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class NewsController extends Controller
 {
 
-    
+
 
     //
     public function index()
@@ -28,7 +28,7 @@ class NewsController extends Controller
     public function create()
     {
         // News::create([
-            
+
         //     'title'=>'abc',
         //     'date'=>'2021-05-05',
         //     'img'=>'https://cdn.pixabay.com/photo/2015/03/26/09/47/sky-690293__340.jpg',
@@ -48,10 +48,16 @@ class NewsController extends Controller
             'img'=>$request->img,
             'content'=>$request->content
         ]);
-        
+
         //返回最新消息列表頁面
         return redirect('news');
-        
+
+    }
+
+    public function edit($id){
+        $news = News::find($id);
+        return view('news.edit_news',compact('news'));
+
     }
 
     public function delete($id)
@@ -61,11 +67,16 @@ class NewsController extends Controller
         ->delete();
     }
 
-    public function update($id)
+    public function update(Request $request)
     {
-        DB::table('news')
-        ->where('id',$id)
-        ->update(['title'=>'aaa']);
+        // dd($request->id);
+        // dd(News::where('id', $request->id)->get());
+        // dd($request->except(['_token']));
+        News::where('id', $request->id)->update($request->except(['_token']));
+
+
+
+        return redirect('news');
     }
 
 

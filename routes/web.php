@@ -67,8 +67,14 @@ Route::get('news/create','NewsController@create');
 //儲存資料
 Route::post('news/store','NewsController@store');
 
+//編輯資料
+Route::get('news/edit/{id}','NewsController@edit');
 
-Route::get('news/update/{id}','NewsController@update');
+//更新頁面資料
+
+
+
+Route::post('news/update','NewsController@update');
 Route::get('news/delete/{id}','NewsController@delete');
 
 // Route::get('news/details',function()
