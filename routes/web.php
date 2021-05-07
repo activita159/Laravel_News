@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    // return view('index');
+    return view('welcome');
 });
 
 
@@ -96,3 +97,7 @@ Route::get('news/delete/{id}','NewsController@delete');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

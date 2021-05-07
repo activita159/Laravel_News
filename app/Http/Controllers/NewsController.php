@@ -19,9 +19,10 @@ class NewsController extends Controller
         // compact('newsData') = ['newsData'=> [{"id":1,"title":"12233","content":"safdfasdfas","img":"https:\/\/cdn.pixabay.com\/photo\/2015\/03\/26\/09\/47\/sky-690293__340.jpg","date":"2021-05-27","views":0,"created_at":"2021-05-06T08:43:46.000000Z","updated_at":"2021-05-06T08:43:46.000000Z"}]]
         return view('news.taiwan-index',compact('newsData'));
     }
-    public function details($id)
+    public function details($BBBBB)
     {
-        $newsDetail = News::find($id);
+        dd($BBBBB);
+        // $newsDetail = News::find($id);
         return view('news.taiwan-page1',compact('newsDetail'));
     }
 
@@ -62,9 +63,12 @@ class NewsController extends Controller
 
     public function delete($id)
     {
-        News::
-        where('id',$id)
-        ->delete();
+        News::find($id)->delete();
+
+
+
+
+        return redirect('/news');
     }
 
     public function update(Request $request)
