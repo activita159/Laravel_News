@@ -73,7 +73,8 @@ class NewsController extends Controller
 
     public function update(Request $request)
     {
-        // dd($request->id);
+
+        // dd($request->all());
         // dd(News::where('id', $request->id)->get());
         // dd($request->except(['_token']));
         News::where('id', $request->id)->update($request->except(['_token']));

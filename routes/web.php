@@ -57,26 +57,28 @@ Route::get('/', function () {
 
 
 
+// Route::prefix('news')->group()
+
+Route::get('/news','NewsController@index');
 
 
-Route::get('news','NewsController@index');
-Route::get('news/details/{id}','NewsController@details');
+Route::get('/news/details/{id}','NewsController@details');
 
 //新增資料
-Route::get('news/create','NewsController@create');
+Route::get('/news/create','NewsController@create');
 
 //儲存資料
-Route::post('news/store','NewsController@store');
+Route::post('/news/store','NewsController@store');
 
 //編輯資料
-Route::get('news/edit/{id}','NewsController@edit');
+Route::get('/news/edit/{id}','NewsController@edit');
 
 //更新頁面資料
 
 
 
-Route::post('news/update','NewsController@update');
-Route::get('news/delete/{id}','NewsController@delete');
+Route::post('/news/update','NewsController@update');
+Route::get('/news/delete/{id}','NewsController@delete');
 
 // Route::get('news/details',function()
 // {
