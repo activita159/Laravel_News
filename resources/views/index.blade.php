@@ -412,9 +412,9 @@
         @csrf
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">
-            Feedback
-            <br>Post-ironic portland shabby chic echo park, banjo fashion axe</br>
-            <br>email</br>
+            Feedback<br>
+            Post-ironic portland shabby chic echo park, banjo fashion axe<br>
+            email
           </label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
