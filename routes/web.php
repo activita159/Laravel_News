@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    // return view('index');
-    return view('welcome');
+    return view('index');
+    // return view('welcome');
 });
 
 
@@ -58,6 +58,8 @@ Route::get('/', function () {
 
 
 // Route::prefix('news')->group()
+
+Route::post('/contact_us/store','ContactUsController@store');
 
 Route::get('/news','NewsController@index');
 
