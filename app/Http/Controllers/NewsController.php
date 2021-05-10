@@ -17,13 +17,15 @@ class NewsController extends Controller
         $newsData = News::get();
         // $newsData = [{"id":1,"title":"12233","content":"safdfasdfas","img":"https:\/\/cdn.pixabay.com\/photo\/2015\/03\/26\/09\/47\/sky-690293__340.jpg","date":"2021-05-27","views":0,"created_at":"2021-05-06T08:43:46.000000Z","updated_at":"2021-05-06T08:43:46.000000Z"}]
         // compact('newsData') = ['newsData'=> [{"id":1,"title":"12233","content":"safdfasdfas","img":"https:\/\/cdn.pixabay.com\/photo\/2015\/03\/26\/09\/47\/sky-690293__340.jpg","date":"2021-05-27","views":0,"created_at":"2021-05-06T08:43:46.000000Z","updated_at":"2021-05-06T08:43:46.000000Z"}]]
-        return view('news.taiwan-index',compact('newsData'));
+
+        return view('front.taiwan-index',compact('newsData'));
     }
-    public function details($BBBBB)
+    public function details($id)
     {
-        dd($BBBBB);
-        // $newsDetail = News::find($id);
-        return view('news.taiwan-page1',compact('newsDetail'));
+
+        $newsDetail = News::find($id);
+
+        return view('front.taiwan-page1',compact('newsDetail'));
     }
 
     public function create()
@@ -36,7 +38,7 @@ class NewsController extends Controller
         //     'content'=>'555555666666666',
         //     'view'=>0
         // ]);
-        return view('news.create_news');
+        return view('admin.create_news');
     }
 
     public function store(Request $request)
@@ -57,7 +59,7 @@ class NewsController extends Controller
 
     public function edit($id){
         $news = News::find($id);
-        return view('news.edit_news',compact('news'));
+        return view('admin.edit_news',compact('news'));
 
     }
 

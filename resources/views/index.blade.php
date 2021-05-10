@@ -1,8 +1,4 @@
 @extends('layouts.template')
-
-
-
-
 @section('css')
 
 @endsection

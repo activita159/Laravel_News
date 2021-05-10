@@ -12,10 +12,10 @@
         font-family: inherit;
       }
       .navbar{
-        width: 100%;            
-        height: 92px;       
+        width: 100%;
+        height: 92px;
       }
-      .box{        
+      .box{
         width: 70px;
         height: 3px;
         background-color :rgb(0, 9, 128) ;
@@ -47,12 +47,15 @@
 <body>
   <div class="container mt-0 d-flex flex-wrap" >
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="/">Navbar</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto" >
+            <li class="nav-item active mr-3">
+                <a class="nav-link " href="/news">News <span class="sr-only">(current)</span></a>
+            </li>
           <li class="nav-item active mr-3">
             <a class="nav-link " href="#">Blog <span class="sr-only">(current)</span></a>
           </li>
@@ -71,7 +74,7 @@
           <li>
             <img src="{{ asset('./img/login.jpg') }}" id="Link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" width="36px" height="34px" alt="">
             <div class="dropdown-menu" aria-labelledby="Link" style="width: 100px;position: absolute;top:90%;left: 85%;">
-              <a class="dropdown-item" href="#" style="text-align: center;">Login</a>
+              <a class="dropdown-item" href="/login" style="text-align: center;">Login</a>
             </div>
           </li>
         </ul>

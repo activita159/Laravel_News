@@ -1,5 +1,7 @@
 <?php
 
+use App\News;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -57,11 +59,20 @@ Route::get('/', function () {
 
 
 
-// Route::prefix('news')->group()
+
+    Route::get('/home', function(){
+        // dd('1111');
+        $newsData = News::get();
+        // dd($newsData);
+        return view('home', compact('newsData'));
+    });
+
+
+Route::get('/news','NewsController@index');
 
 Route::post('/contact_us/store','ContactUsController@store');
 
-Route::get('/news','NewsController@index');
+
 
 
 Route::get('/news/details/{id}','NewsController@details');
