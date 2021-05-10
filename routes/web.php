@@ -60,12 +60,12 @@ Route::get('/', function () {
 
 
 
-    Route::get('/home', function(){
-        // dd('1111');
-        $newsData = News::get();
-        // dd($newsData);
-        return view('home', compact('newsData'));
-    });
+    // Route::get('/home', function(){
+
+    //     $newsData = News::get();
+
+    //     return view('home', compact('newsData'));
+    // });
 
 
 Route::get('/news','NewsController@index');

@@ -42,19 +42,20 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($newsData as $news)
+            @foreach ($newsData as $item)
             <tr>
-                <td>{{$news->title}}</td>
-                <td>{{$news->date}}</td>
-                <td>{{$news->img}}</td>
-                <td>{{$news->content}}</td>
-                {{-- <td>{{$news->created_at}}</td> --}}
+                <td>{{$item->title}}</td>
+                <td>{{$item->date}}</td>
+                <td>{{$item->img}}</td>
+                <td>{{$item->content}}</td>
+
                 <td>
-                    <button type="button">Edit</button>
+                    <a href='/news/edit/{{$item->id}}'>Edit</a>
+                    {{-- <button type="button">Edit</button> --}}
                     <button type="button">Delete</button>
                 </td>
             </tr>
-            
+
             @endforeach
         </tbody>
     </table>
