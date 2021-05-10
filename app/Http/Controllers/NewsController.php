@@ -68,9 +68,7 @@ class NewsController extends Controller
         News::find($id)->delete();
 
 
-
-
-        return redirect('/news');
+        return redirect('/home');
     }
 
     public function update(Request $request)

@@ -52,7 +52,7 @@
                 <td>
                     <a href='/news/edit/{{$item->id}}'>Edit</a>
                     {{-- <button type="button">Edit</button> --}}
-                    <button type="button">Delete</button>
+                    <a href='/news/delete/{{$item->id}}'>delete</a>
                 </td>
             </tr>
 
