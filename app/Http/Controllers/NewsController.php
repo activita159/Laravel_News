@@ -71,16 +71,15 @@ class NewsController extends Controller
         return redirect('/home');
     }
 
-    public function update(Request $request)
+    public function update(Request $request,$id)
     {
 
         // dd($request->all());
         // dd(News::where('id', $request->id)->get());
         // dd($request->except(['_token']));
-        News::find($request->id)->update();
+
+        News::find($id)->update($request->all());
         // News::where('id', $request->id)->update($request->except(['_token']));
-
-
 
         return redirect('/home');
     }

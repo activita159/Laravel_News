@@ -90,7 +90,7 @@ Route::get('/news/edit/{id}','NewsController@edit');
 
 
 
-Route::post('/news/update','NewsController@update');
+Route::post('/news/update/{id}','NewsController@update');
 Route::get('/news/delete/{id}','NewsController@delete');
 
 // Route::get('news/details',function()

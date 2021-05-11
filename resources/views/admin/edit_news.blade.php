@@ -5,7 +5,7 @@
 @endsection
 
 @section('main')
-    <form action="/news/update" method="POST">
+    <form action="/news/update/{{$news->id}}" method="POST">
     {{-- <form action="{{ route('news.update', ['news', $news]) }}" method="POST"> --}}
 
         @csrf
