@@ -48,7 +48,7 @@
                 <td>{{$item->date}}</td>
                 <td>{{$item->img}}</td>
                 <td>{{$item->content}}</td>
-
+                {{-- <td>{!! $item->introduction !!}</td> --}}
                 <td>
                     <a href='/news/edit/{{$item->id}}'>Edit</a>
                     {{-- <button type="button">Edit</button> --}}

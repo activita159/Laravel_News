@@ -315,6 +315,7 @@
 
 
         <form action="/action_page.php">
+          @csrf
           <label for="cars"><br>Color
             <button style="background-color: white;width: 24px;height: 24px;border-radius: 50%;border: 2px solid grey;">
             </button>
@@ -330,6 +331,9 @@
             <option value="L">L</option>
             <option value="XL">XL</option>
           </select>
+          
+          
+          
         </form>
         <p><hr><h4 style="display: flex;">$58.00<button class="ml-auto">Button</button></p>
 
@@ -401,16 +405,28 @@
 
   <div class="container-fluid mapppppp" style="position: relative;">
     <div class="map" style="margin-top: 100px;">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d442130.5514755871!2d-90.16275326139586!3d30.032699596934652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a454b2118265%3A0xdb065be85e22d3b4!2z576O5ZyL6Lev5piT5pav5a6J6YKj5paw5aWn54i-6Imv!5e0!3m2!1szh-TW!2stw!4v1618191755578!5m2!1szh-TW!2stw" width="100%" height="700px" style="border:0;" allowfullscreen="" loading="lazy">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d442130.5514755871!2d-90.16275326139586!3d30.032699596934652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a454b2118265%3A0xdb065be85e22d3b4!2z576O5ZyL6Lev5piT5pav5a6J6YKj5paw5aWn54i-6Imv!5e0!3m2!1szh-TW!2stw!4v1618191755578!5m2!1szh-TW!2stw" width="100%" height="730px" style="border:0;" allowfullscreen="" loading="lazy">
       </iframe>
 
-      <form action="/contact_us/store" method="POST" style="position: absolute;top:20%;right: 10%;background-color: rgb(255, 255, 255);padding: 20px;">
+      <form id="contect_us" action="/contact_us/store" method="POST" style="position: absolute;top:0;right: 10%;background-color: rgb(255, 255, 255);padding: 20px;">
         @csrf
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">
             Feedback<br>
             Post-ironic portland shabby chic echo park, banjo fashion axe<br>
           </label>
+        </div>
+        <div class="form-group">
+          <label for="name">name</label>
+          <input type="name" class="form-control" id="name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="title">title</label>
+          <input type="title" class="form-control" id="title" name="title">
+        </div>
+        <div class="form-group">
+        <label for="phone">phone</label>
+        <input type="phone" class="form-control" id="phone" name="phone">
         </div>
         <div class="form-group">
             <label for="email">email</label>
@@ -420,7 +436,12 @@
           <label for="content">Message</label>
           <textarea class="form-control" id="content" rows="3" name="content"></textarea>
         </div>
-
+        <div class="form-group">
+          {!! htmlFormSnippet() !!}
+          @error('g-recaptcha-response')
+            <strong class="text-danger">請勾我不是機器人</strong>
+          @enderror
+        </div>
         <button type="submit" class="btn btn-primary" style="width:100%">Button</button>
         <p style="font-size: 5px;">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
       </form>
